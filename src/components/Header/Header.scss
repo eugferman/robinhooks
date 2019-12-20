@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script&display=swap');
+
+.header {
+	background-color: white;
+	
+
+	h1{
+		font-family: 'Oleo Script', cursive; 
+		font-size: 40px;
+	}
+}
+
+.header-opacity{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.2);
+	
+}
+
+.header-title-nav{
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	vertical-align: center;
+}
+
+
+.header-nav{
+	display:flex;
+	flex-direction: row;
+}
+
+.header-nav a:link{
+  text-decoration: none;  
+}
+
+.header-nav a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+
+
+.header-nav div{
+	border: none;
+	color: black;
+  padding: 25px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+	cursor: pointer;
+}
+
+.header-nav div:hover {
+  background: black;
+	background-color:#3885b9;
+}
+
+
+
+
+
+

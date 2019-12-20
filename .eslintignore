@@ -1,0 +1,8 @@
+node_modules/
+.npm/
+build/
+.next
+.vscode
+packages/
+.git/
+README.md

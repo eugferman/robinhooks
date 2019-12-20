@@ -1,0 +1,207 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.main-home-user{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+  button a:link{
+    text-decoration: none;
+  }
+  button a:visited{
+    color: black;
+  }
+
+  h2{
+    text-align: center;
+  }
+
+}
+
+.header-home{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  width: 1024px;
+}
+
+.panel-busqueda-coleccion{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  width: 600px;
+  height: 60px;
+  
+  form{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+  }
+  
+  input[type=text] {
+    margin-left: 10px;
+    height: 40px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  input[type=submit] {
+    font-size: 15px;
+    background-color: #e6e6e6;
+    color: black;
+    box-sizing: border-box;
+    border: none;
+    width: 200px;
+    padding: 15px 22px;
+    margin: 0px 0px 0px 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover{
+    background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+    background-color:#6c7c7c;
+  }
+
+}
+
+
+.coleccion-del-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+
+  img {
+    width: 200;
+    height: 100;
+    margin: 5px 0px 10px 0px;
+    border-radius: 5px;
+  }
+
+  ul{
+    display: flex;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  li {
+    margin: 40px 40px 0px 0px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 20px;
+    border-radius: 5px;
+  }
+  
+  p{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  button{
+    background-color: rgb(230, 230, 230);
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  button a:link{
+    text-decoration: none;
+  }
+   
+  
+  button:hover {
+    background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+    background-color:#6c7c7c;
+  }
+}
+
+.lista-colecciones{
+  
+  margin-bottom: 30px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  ul{
+    display: flex;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  li {
+    margin: 40px 40px 0px 0px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 20px;
+    border-radius: 5px;
+  }
+  
+  p{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  button{
+    background-color: rgb(230, 230, 230);
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  button a:link{
+    text-decoration: none;
+  }
+   
+  
+  button:hover {
+    background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+    background-color:#6c7c7c;
+  }
+}
+
+.coleccion-individual{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    margin: 5px 0px 10px 0px;
+    border-radius: 5px;
+  }
+}
+
+
+
+

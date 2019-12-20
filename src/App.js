@@ -1,83 +1,74 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from 'react-router-dom';
-import { createStore, combineReducers } from 'redux';
-import { Provider, useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { setUser } from './redux/actions/userActions';
+import { setAdmin } from './redux/actions/adminActions';
+import { registerAuthObserver } from './services/auth';
+import { getItem } from './services/database';
 
 import Header from './components/Header/Header';
+import Logout from './pages/Logout/Logout';
+import Login from './pages/Login/Login';
 import Home from './pages/Home/Home';
-import About from './pages/About/About';
+import HomeAdmin from './pages/HomeAdmin/HomeAdmin';
+import FormRegistry from './components/FormRegistry/FormRegistry';
+import UserArea from './components/UserArea/UserArea';
+import Coleccion from './components/Coleccion/Coleccion';
 
-function counterReducer(state = { count: 0 }, action) {
-  switch (action.type) {
-    case 'INCREMENT_COUNT':
-      return {
-        ...state,
-        count: state.count + 1
-      };
-    case 'DECREMENT_COUNT':
-      return {
-        ...state,
-        count: state.count - 1
-      };
-    default:
-      return state;
-  }
-}
-
-
-const rootReducer = combineReducers({
-  counterReducer
-});
-
-const INITIAL_STATE = {};
-
-const store = createStore(rootReducer, INITIAL_STATE);
+import './App.scss';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const userRedux = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const cancelObserver = registerAuthObserver(async (user) => {
+      if (user) {
+        const profile = await getItem('usuarios-registrados', user.uid);
+        if (profile) {
+          dispatch(setUser(profile));
+        } else {
+          if (user.email === 'admin@admin.com') {
+            dispatch(setAdmin(true));
+          }
+          console.log('todavía se está registrando');
+        }
+      } else {
+        dispatch(setUser(null));
+      }
+      setIsLoading(false);
+    });
+
+    return () => {
+      cancelObserver();
+    };
+  }, []);
+
+  if (isLoading) return <div>Loading...</div>;
+  const isLogged = userRedux !== null;
+
   return (
-    <>
+    <div>
       <Router>
         <Header />
         <Switch>
-          <Route path="/home" component={Home}><Home /></Route>
-          <Route path="/about" component={About}><About /></Route>
+          <Route path="/logout" component={Logout} />
+          {!isLogged && <Route path="/login" component={Login} />}
+          <Route path="/formregistry" component={FormRegistry} />
+          <Route path="/homeadmin" component={HomeAdmin} />
+          <Route path="/userarea" component={UserArea} />
+          <Route path="/:id" component={Coleccion} />
+          <Route exact path="/" component={Home} />
         </Switch>
+
       </Router>
-      <Provider store={store}>
-        <Counter />
-      </Provider>
-    </>
-  );
-}
-
-function Counter() {
-  const { count } = useSelector((state) => ({
-    ...state.counterReducer
-  }));
-  const dispatch = useDispatch();
-
-  function incrementCount() {
-    dispatch({
-      type: 'INCREMENT_COUNT'
-    });
-  }
-
-  function decrementCount() {
-    dispatch({
-      type: 'DECREMENT_COUNT'
-    });
-  }
-
-  return (
-    <>
-      <h2>Counter: {count}</h2>
-      <button type="button" onClick={incrementCount}>+</button>
-      <button type="button" onClick={decrementCount}>-</button>
-    </>
+    </div>
   );
 }
 

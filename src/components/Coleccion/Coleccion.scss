@@ -1,0 +1,138 @@
+
+
+.button-coleccion{
+  display:flex;
+  justify-content: center;
+  margin: 30px 0px 0px 0px;
+
+  button a:link{
+    text-decoration: none;
+  }
+
+  button a:visited{
+    color: black;
+  }
+}
+
+.datos-coleccion{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+  img{
+    padding: 40px;
+    height: 400px;
+    width: 650px;
+    border-radius: 5px;
+  }
+
+  h2{
+    text-align: center;
+  }
+}
+
+.form-comentarios{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  form{
+    margin: 0px 0px 20px 0px;
+  }
+  
+  textarea{
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 16px;
+    background-color: #e6e6e6;
+    color: black;
+    box-sizing: border-box;
+    border: none;
+    width: 20%;
+    padding: 15px 32px;
+    margin-top: 14px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  button:hover{
+    background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+    background-color:#6c7c7c;
+  }
+
+}
+
+.lista-comentarios{
+  display:flex;
+  justify-content: center;
+  margin: 20px 0px 20px 0px;
+
+  
+
+  ul{
+    list-style: none;
+    width: 600px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 20px;
+    border-radius: 5px;
+  }
+
+  li{
+    padding: 10px;
+  }
+
+  p{
+    padding: 2px;
+    margin-bottom: 10px;
+  }
+
+  hr{
+    height: 10px;
+    border: 0;
+	  box-shadow: 0 9px 5px -10px #8c8b8b inset; 
+  }
+}
+
+.lista-comentarios-comentario{
+  line-height: 25px;
+}
+
+
+.datos-coleccion-inferior{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px 0px 20px 0px;
+  background-color: white;
+  box-shadow: 5px 5px 20px;
+  border-radius: 5px;
+  width: 1200px;
+  height: 550px;
+  ul{
+    list-style: none;
+  }
+}
+
+.datos-coleccion-inferior-left{
+  width: 700px;
+  height: 300px;
+
+  img{
+    border-radius: 5px;
+    
+  }
+}
+
+.datos-coleccion-inferior-right{
+  line-height: 25px;
+  padding: 35px;
+}
+

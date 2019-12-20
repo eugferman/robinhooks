@@ -1,0 +1,143 @@
+.user-area{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  h2, h3{
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+
+  p{
+    margin-bottom: 10px;
+  }
+
+}
+
+.bloque-area-privada{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.left-datos-usuario{
+  margin-bottom: 100px;
+  background-color:#ffffff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px;
+  width: 30%;
+  padding: 15px;
+}
+
+.datos-usuario{
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 15px;
+
+  img{
+    border-radius: 5px;
+  }
+}
+
+.right-datos-usuario{
+  margin-bottom: 100px;
+  background-color:#ffffff;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 5px 5px 20px;
+  width: 30%;
+
+  textarea{
+    width: 96%;
+    height: 170px;
+    padding: 10px;
+  }
+}
+
+.middle-datos-usuario{
+    margin-bottom: 100px;
+    background-color:#ffffff;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 5px 5px 20px;
+    width: 30%;
+
+    img {
+      border-radius: 5px;
+      width: 100%;
+      height: 230px;
+    }
+}
+
+
+.button-usuario{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 0px 35px 0px;
+
+  button a:link{
+    text-decoration: none;
+  }
+  button a:visited{
+    color: black;
+  }
+}
+
+button{
+  background-color: rgb(230, 230, 230);
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+  background-color:#6c7c7c;
+}
+
+input[type=submit] {
+  font-size: 16px;
+  background-color: #e6e6e6;
+  color: black;
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+  padding: 15px 32px;
+  margin: 4px 2px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover{
+  background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+  background-color:#6c7c7c;
+}
+
+@media (max-width: 769px) {
+  .bloque-area-privada{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .left-datos-usuario {
+    width: 400px;
+    padding: 15px;
+  }
+  .middle-datos-usuario {
+    width: 400px;
+  }
+  .right-datos-usuario {
+    width: 400px;
+}
+}

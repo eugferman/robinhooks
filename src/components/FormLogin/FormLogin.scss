@@ -1,0 +1,55 @@
+.form-login{
+  background-color: white;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  box-shadow: 5px 5px 10px grey;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=submit]:hover {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.button-registro{
+  padding: 15px;
+  font-size: 14px;
+}
+
+.button-registro{
+
+  p:link{
+    text-decoration: none;
+  }
+
+}
